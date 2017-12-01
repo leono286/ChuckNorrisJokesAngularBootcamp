@@ -1,4 +1,7 @@
+import { Observable } from 'rxjs/Observable';
+import { DummyService } from './dummy.service';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  joke: Observable<any>;
+
+  constructor(private service: DummyService) {
+    this.joke = this.service.getContent();
+  }
+
+
+
 }
