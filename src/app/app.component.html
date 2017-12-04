@@ -5,6 +5,7 @@
   <div class="text-center">
     <blockquote>
       <h3>
+        <p *ngIf="!(joke | async)?.length">Fetching jokes...</p>
         <ul>
           <li *ngFor="let singleJoke of joke | async">{{singleJoke}}</li>
         </ul>
