@@ -1,1 +1,13 @@
-{{joke | async}}
+<div class="container">
+
+  <img src="assets/img/chuck.png" alt="Chuck-face" class="img-responsive center-block" height="320">
+
+  <div class="text-center">
+    <blockquote>
+      <h3>
+        <ul>
+          <li *ngFor="let singleJoke of joke | async">{{singleJoke}}</li>
+        </ul>
+      </h3>
+    </blockquote>
+  </div>

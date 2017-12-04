@@ -17,7 +17,7 @@ export class DummyService {
 
   getContent(): Observable<any> {
     return Observable
-      .timer(0, 3000)
+      .timer(0, 6000)
       .switchMap(x => this.http.get<Joke>(this.url))
       .pluck('value')
       .pairwise();

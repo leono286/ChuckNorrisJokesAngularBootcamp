@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { ArrayItemsToLiItemsPipe } from './pipes/array-items-to-li-items.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArrayItemsToLiItemsPipe
   ],
   imports: [
     BrowserModule,
